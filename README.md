@@ -38,6 +38,20 @@ react-native link jcore-react-native
             manifestPlaceholders = [
                     JPUSH_APPKEY: "yourAppKey",         //在此替换你的APPKey
                     JPUSH_CHANNEL: "yourChannel"        //在此替换你的channel
+
+                    //xiaomi_config_start
+                    XIAOMI_APPID  : "MI-小米的APPID",
+                    XIAOMI_APPKEY : "MI-小米的APPKEY",
+                    //xiaomi_config_end
+                    //oppo_config_start
+                    OPPO_APPKEY   : "OP-oppo的APPKEY",
+                    OPPO_APPID    : "OP-oppo的APPID",
+                    OPPO_APPSECRET: "OP-oppo的APPSECRET",
+                    //oppo_config_end
+                    //vivo_config_start
+                    VIVO_APPKEY   : "vivo的APPKEY",
+                    VIVO_APPID    : "vivo的APPID",
+                    //vivo_config_end
             ]
         }
     }
@@ -51,6 +65,14 @@ react-native link jcore-react-native
     }
   ```
 
+  ```
+  //huawei_plugin_start
+  //华为请按照厂商文档配置根 gradle 华为镜像依赖和添加 agconnect-services.json 后再打开此插件依赖
+  //在华为应用服务控制台下载配置文件 agconnect-services.json 并放置到应用主工程的 assets 目录下
+  //apply plugin: 'com.huawei.agconnect'
+  //huawei_plugin_end
+  ```
+
 * setting.gradle
 
   ```
@@ -58,17 +80,6 @@ react-native link jcore-react-native
   project(':jpush-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/jpush-react-native/android')
   include ':jcore-react-native'
   project(':jcore-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/jcore-react-native/android')
-  ```
-
-* AndroidManifest.xml
-
-  ```
-  <meta-data
-  	android:name="JPUSH_CHANNEL"
-  	android:value="${JPUSH_CHANNEL}" />
-  <meta-data
-  	android:name="JPUSH_APPKEY"
-  	android:value="${JPUSH_APPKEY}" />    
   ```
 
 ### 2.2 iOS
