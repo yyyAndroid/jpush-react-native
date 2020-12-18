@@ -39,6 +39,6 @@ dependencies {
     //huawei_dependencies_end
 
     //oppo_dependencies_start
-    implementation(name: 'com.heytap.msp-push-2.1.0', ext: 'aar')
+    compileOnly(name: 'com.heytap.msp-push-2.1.0', ext: 'aar')
     //oppo_dependencies_end
 }
