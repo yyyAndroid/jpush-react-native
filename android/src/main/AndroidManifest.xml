@@ -29,8 +29,8 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Android Q后台定位权限 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <!--xiaomi_permission_start-->
     <permission
@@ -42,7 +42,6 @@
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <!--oppo_permission_end-->
-
 
 
     <uses-sdk tools:overrideLibrary="
@@ -139,7 +138,7 @@
             android:name="cn.jpush.android.service.JNotifyActivity"
             android:exported="true"
             android:taskAffinity="jpush.custom"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.JNotifyActivity" />
 
@@ -289,7 +288,6 @@
         <!--huawei_config_end-->
 
 
-
         <!--oppo_config_start-->
         <service
             android:name="cn.jpush.android.service.PluginOppoPushService"
@@ -343,6 +341,15 @@
             android:name="com.vivo.push.app_id"
             android:value="${VIVO_APPID}" />
         <!--vivo_config_end-->
+
+        <!--Required_config-->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+        <!-- </>值来自开发者平台取得的AppKey -->
 
 
     </application>

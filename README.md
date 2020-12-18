@@ -82,16 +82,6 @@ react-native link jcore-react-native
   project(':jcore-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/jcore-react-native/android')
   ```
 
- ```
- AndroidManifest.xml
- <!--Required_config-->
-        <meta-data
-            android:name="JPUSH_CHANNEL"
-            android:value="${JPUSH_CHANNEL}" />
-        <meta-data
-            android:name="JPUSH_APPKEY"
-            android:value="${JPUSH_APPKEY}" /> <!-- </>值来自开发者平台取得的AppKey -->
- ```
 ### 2.2 iOS
 注意：您需要打开ios目录下的.xcworkspace文件修改您的包名
 
