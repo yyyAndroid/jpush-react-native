@@ -37,5 +37,7 @@ dependencies {
 
     //oppo_dependencies_start
     compileOnly(name: 'com.heytap.msp-push-2.1.0', ext: 'aar')
+    implementation 'com.huawei.hms:push:4.0.2.300'
+    implementation 'cn.jiguang.sdk.plugin:huawei:3.6.0'
     //oppo_dependencies_end
 }
