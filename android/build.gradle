@@ -36,7 +36,7 @@ dependencies {
 
     //oppo_dependencies_start
     compileOnly(name: 'com.heytap.msp-push-2.1.0', ext: 'aar')
-
+    implementation project(':jcore-react-native')
     implementation 'com.huawei.hms:push:4.0.2.300'
     implementation 'cn.jiguang.sdk.plugin:huawei:3.8.6'
     implementation 'com.huawei.agconnect:agconnect-core:1.2.1.301'
